@@ -1,0 +1,165 @@
+body {
+  background-color: #6e6e6e; /* Gris oscuro */
+  color: #ffffff; /* Blanco */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* 
+header {
+  background-color: #6e6e6e;
+  color: #ffffff; 
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+*/
+
+nav {
+  background-color: #383838; /* Gris oscuro */
+  /* padding: 15px; */
+  position: relative;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#nav-links,
+#nav-logo {
+}
+#nav-logo {
+  font-size: 2rem;
+  position: relative;
+  display: flex;
+}
+.jocker {
+  color: transparent;
+}
+#nav-white {
+  top: 10%;
+  left: 0;
+}
+#nav-outline {
+  top: 10%;
+  left: 80%;
+}
+
+#nav-links {
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+nav a {
+  color: #ffffff; /* Blanco */
+  margin: 0 10px;
+  text-decoration: none;
+}
+.logo {
+  padding-left: 5%;
+}
+
+.outline-logo,
+.white-logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 550;
+  font-style: normal;
+  display: inline;
+  position: absolute;
+}
+.logo {
+  margin-top: 10%;
+  position: relative;
+  /* 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  */
+}
+#titleP,
+#outline-title {
+  font-size: 4.5rem;
+  letter-spacing: -0.2rem;
+}
+.white-logo {
+  color: #ffffff;
+  z-index: 0;
+}
+#titleP {
+  top: 0%;
+}
+.outline-logo {
+  color: transparent;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #baff39;
+  z-index: 1;
+}
+#outline-title {
+  top: 0%;
+  left: 21.5%;
+}
+#logoB {
+  width: 100%;
+  position: absolute;
+  display: inline;
+  top: 50%;
+  left: 25%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: #aaa6a6;
+}
+#iconos-header {
+  font-size: 5rem;
+  color: #baff39;
+  width: 40%;
+}
+
+.content {
+  margin-top: 5rem;
+  padding: 20px;
+}
+
+.section {
+  background-color: #6e6e6e; /* Gris oscuro */
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 20px;
+  color: #ffffff; /* Blanco */
+}
+
+.section h2 {
+  color: #baff39; /* Verde lima */
+}
+
+button,
+.button-link {
+  background-color: #baff39; /* Verde lima */
+  color: #6e6e6e; /* Gris oscuro */
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+button:hover,
+.button-link:hover {
+  background-color: #a9e033; /* Un tono ligeramente más oscuro de verde lima para el hover */
+}
+
+footer {
+  background-color: #6e6e6e; /* Gris oscuro */
+  color: #ffffff; /* Blanco */
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
