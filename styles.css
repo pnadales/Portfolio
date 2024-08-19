@@ -35,6 +35,14 @@ nav div {
 .navbar-nav {
   font-weight: 300;
   font-size: 1.2rem;
+  background-color: rgba(56, 56, 56, 0.9);
+  position: relative;
+  z-index: 1;
+  border-radius: 1rem;
+}
+header {
+  position: relative;
+  z-index: 0;
 }
 .navbar-toggler {
   border-color: #ffffff;

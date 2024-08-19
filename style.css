@@ -28,9 +28,6 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-#nav-links,
-#nav-logo {
-}
 #nav-logo {
   font-size: 2rem;
   position: relative;
