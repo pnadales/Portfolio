@@ -29,7 +29,7 @@
     ></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
         <div id="nav-logo" class="navbar-brand">
           <p id="nav-white" class="white-logo">P</p>
@@ -51,24 +51,39 @@
           id="navbarNavAltMarkup"
         >
           <div class="navbar-nav">
-            <a class="nav-link text-light" aria-current="page" href="#"
+            <a class="nav-link text-light" aria-current="page" href="#home"
               >Inicio</a
             >
-            <a class="nav-link text-light" href="#">Sobre Mí</a>
+            <a class="nav-link text-light" href="#about">Sobre Mí</a>
             <a class="nav-link text-light" href="#">Proyectos</a>
             <a class="nav-link text-light" href="">Contacto</a>
           </div>
         </div>
       </div>
     </nav>
-    <header class="container">
+    <header id="home" class="container">
       <div class="row">
         <span id="logo" class="col-12 col-md-10 col-lg-8 col-xl-6">
           <div id="title" class="justify-content-end">
-            <p id="white-title" class="white-logo">Paulo</p>
-            <p id="outline-title" class="outline-logo">Nadales</p>
+            <h1 id="white-title" class="white-logo">Paulo</h1>
+            <h1 id="outline-title" class="outline-logo">Nadales</h1>
           </div>
           <p id="logoB">Fullstack Developer</p>
+          <div id="title-icon" class="">
+            <a
+              href="https://github.com/pnadales"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-square-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/pnadales/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-linkedin ps-1"></i
+            ></a>
+          </div>
         </span>
         <div
           id="iconos-header"
@@ -85,6 +100,35 @@
         </div>
       </div>
     </header>
+    <main>
+      <section id="about" class="container">
+        <h2>Sobre Mí</h2>
+        <div class="row pt-5">
+          <div id="about-text" class="col-12 col-lg-6">
+            <p>
+              Soy un entusiasta de la tecnología en proceso de transición desde
+              la carpintería hacia el desarrollo de software, con un enfoque en
+              JavaScript tanto para frontend como backend.
+            </p>
+            <p>
+              Aunque no tengo experiencia profesional formal como desarrollador,
+              he creado proyectos personales que demuestran mis habilidades y
+              compromiso con el aprendizaje continuo. Busco oportunidades para
+              aplicar mis conocimientos y contribuir a proyectos innovadores. Mi
+              pasión, proactividad y capacidad de adaptación me convierten en un
+              miembro valioso para cualquier equipo de desarrollo.
+            </p>
+            <p>
+              Si buscas un desarrollador motivado y en crecimiento, no dudes en
+              contactarme.
+            </p>
+          </div>
+          <div id="about-img" class="col-lg-6">
+            <img src="herramientas.png" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

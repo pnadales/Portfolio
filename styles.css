@@ -7,7 +7,8 @@ body {
 }
 
 .navbar {
-  background-color: #383838;
+  background-color: rgba(56, 56, 56, 0.9);
+  /* background-color: #383838; */
   height: 5rem;
   margin-bottom: 10%;
 }
@@ -35,12 +36,14 @@ nav div {
 .navbar-nav {
   font-weight: 300;
   font-size: 1.2rem;
-  background-color: rgba(56, 56, 56, 0.9);
+  /* background-color: rgba(56, 56, 56, 0.9); */
   position: relative;
   z-index: 1;
   border-radius: 1rem;
 }
 header {
+  padding-top: 20%;
+
   position: relative;
   z-index: 0;
 }
@@ -53,12 +56,14 @@ header {
   background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 #title {
-  font-size: 4.5rem;
   position: relative;
   display: flex;
   align-items: center;
   padding-top: 1%;
   font-weight: 550;
+}
+h1 {
+  font-size: 4.5rem;
 }
 #logoB {
   position: relative;
@@ -72,15 +77,28 @@ header {
 .green {
   color: #baff39;
 }
-
-i {
+#iconos-header div i {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3rem;
+}
+#title-icon {
+  text-align: end;
+  margin-top: -5%;
+}
+#title-icon i {
+  font-size: 1.7rem;
+  color: #baff39;
+  opacity: 0.7;
 }
 .icon-row {
   height: 50%;
 }
 
+@media (max-width: 992px) {
+  .navbar-nav {
+    background-color: rgba(56, 56, 56, 0.9);
+  }
+}
 @media (max-width: 570px) {
   #logo {
     padding-top: 10%;
@@ -94,7 +112,7 @@ i {
   }
 
   /* Opcional: Centrando los textos */
-  #title p {
+  #title h1 {
     text-align: end;
     width: auto;
     margin: -10% auto;
@@ -103,4 +121,24 @@ i {
     width: 100%;
     margin-top: 15%;
   }
+}
+h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+#about {
+  text-align: center;
+  margin: 10% auto;
+}
+#about-text {
+  text-align: start;
+}
+
+#about-img {
+  text-align: center;
+  vertical-align: middle;
+}
+#about-img img {
+  width: 60%;
+  object-fit: contain;
 }
