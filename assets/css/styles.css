@@ -50,6 +50,12 @@ header {
   position: relative;
   z-index: 0;
 }
+#down-arrow {
+  font-size: 3rem;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+}
 .navbar-toggler {
   border-color: #ffffff;
   margin-bottom: 5%;
