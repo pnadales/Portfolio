@@ -31,6 +31,13 @@
       src="https://kit.fontawesome.com/8f26d62695.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- prueba -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> -->
   </head>
   <body>
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -59,6 +66,7 @@
               >Inicio</a
             >
             <a class="nav-link text-light" href="#about">Sobre Mí</a>
+            <a class="nav-link text-light" href="#skills">Habilidades</a>
             <a class="nav-link text-light" href="#">Proyectos</a>
             <a class="nav-link text-light" href="">Contacto</a>
           </div>
@@ -89,10 +97,8 @@
             ></a>
           </div>
         </span>
-        <div
-          id="iconos-header"
-          class="col-lg-4 col-xl-6 d-none d-lg-block pt-4"
-        >
+        <div id="iconos-header" class="col-lg-4 col-xl-6 pt-4">
+          <!--  d-none d-lg-block -->
           <div class="row icon-row">
             <i class="fa-solid fa-code col-6 green"></i>
             <i class="fa-solid fa-laptop-code col-6"></i>
@@ -105,30 +111,91 @@
       </div>
     </header>
     <main>
-      <section id="about" class="container">
-        <h2>Sobre Mí</h2>
-        <div class="row pt-5">
-          <div id="about-text" class="col-12 col-lg-6">
-            <p>
-              Soy un entusiasta de la tecnología en proceso de transición desde
-              la carpintería hacia el desarrollo de software, con un enfoque en
-              JavaScript tanto para frontend como backend.
-            </p>
-            <p>
-              Aunque no tengo experiencia profesional formal como desarrollador,
-              he creado proyectos personales que demuestran mis habilidades y
-              compromiso con el aprendizaje continuo. Busco oportunidades para
-              aplicar mis conocimientos y contribuir a proyectos innovadores. Mi
-              pasión, proactividad y capacidad de adaptación me convierten en un
-              miembro valioso para cualquier equipo de desarrollo.
-            </p>
-            <p>
-              Si buscas un desarrollador motivado y en crecimiento, no dudes en
-              contactarme.
-            </p>
+      <section id="about" class="py-5">
+        <div class="container mt-4">
+          <h2>Sobre Mí</h2>
+          <div class="row pt-5">
+            <div id="about-text" class="col-12 col-lg-6">
+              <p>
+                Soy un entusiasta de la tecnología en proceso de transición
+                desde la carpintería hacia el desarrollo de software, con un
+                enfoque en JavaScript tanto para frontend como backend.
+              </p>
+              <p>
+                Aunque no tengo experiencia profesional formal como
+                desarrollador, he creado proyectos personales que demuestran mis
+                habilidades y compromiso con el aprendizaje continuo. Busco
+                oportunidades para aplicar mis conocimientos y contribuir a
+                proyectos innovadores. Mi pasión, proactividad y capacidad de
+                adaptación me convierten en un miembro valioso para cualquier
+                equipo de desarrollo.
+              </p>
+              <p>
+                Si buscas un desarrollador motivado y en crecimiento, no dudes
+                en contactarme.
+              </p>
+            </div>
+            <div id="about-img" class="col-lg-6">
+              <img src="assets/img/herramientas-green.png" alt="" />
+            </div>
           </div>
-          <div id="about-img" class="col-lg-6">
-            <img src="assets/img/herramientas.png" alt="" />
+        </div>
+      </section>
+      <section id="skills" class="container py-5">
+        <h2>Habilidades</h2>
+        <div id="skill-card-container" class="">
+          <div class="row">
+            <div class="skill-card col-12 col-sm-6 col-md-4 col-lg-3">
+              <article>
+                <img src="assets/img/icon-html.png" alt="" />
+                <p>HTML 5</p>
+              </article>
+            </div>
+            <div class="skill-card col-12 col-sm-6 col-md-4 col-lg-3">
+              <article>
+                <img src="assets/img/icon-css.png" alt="" />
+                <p>CSS 3</p>
+              </article>
+            </div>
+            <div class="skill-card col-12 col-sm-6 col-md-4 col-lg-3">
+              <article>
+                <img src="assets/img/icon-javascript.png" alt="" />
+                <p>JavaScript</p>
+              </article>
+            </div>
+            <div class="skill-card col-12 col-sm-6 col-md-4 col-lg-3">
+              <article>
+                <img src="assets/img/icon-postgre.png" alt="" />
+                <p>PostgreSQL</p>
+              </article>
+            </div>
+
+            <div class="skill-card col-12 col-sm-6 col-md-4 col-lg-3">
+              <article>
+                <img src="assets/img/icon-bootstrap.png" alt="" />
+                <p>Bootstrap</p>
+              </article>
+            </div>
+            <div class="skill-card col-12 col-sm-6 col-md-4 col-lg-3">
+              <article>
+                <img src="assets/img/icon-jquery.png" alt="" />
+                <p>JQuery</p>
+              </article>
+            </div>
+            <span class="col-md-2 d-nonde d-md-block d-lg-none"> </span>
+            <div class="skill-card col-12 col-sm-6 col-md-4 col-lg-3">
+              <article>
+                <img src="assets/img/icon-node.png" alt="" />
+                <p>Node</p>
+              </article>
+            </div>
+            <div class="skill-card col-12 col-sm-6 col-md-4 col-lg-3">
+              <article>
+                <img src="assets/img/icon-express.png" alt="" />
+                <p>Express</p>
+              </article>
+            </div>
+            <span class="col-md-2 d-nonde d-md-block d-lg-none"> </span>
           </div>
         </div>
       </section>
