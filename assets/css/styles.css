@@ -204,6 +204,7 @@ h2 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   background-color: #252525;
   color: #ffffff;
+  margin-top: 2rem;
 }
 .card img {
   width: 100%;
