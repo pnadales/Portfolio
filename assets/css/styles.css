@@ -98,6 +98,7 @@ h1 {
   font-size: 1.7rem;
   color: #baff39;
   opacity: 0.7;
+  transition: transform 0.2s;
 }
 .icon-row {
   height: 50%;
@@ -105,10 +106,19 @@ h1 {
 
 @media (max-width: 992px) {
   .navbar-nav {
-    background-color: rgba(56, 56, 56, 0.7);
+    background-color: rgba(56, 56, 56, 0.9);
     /* background-color: #383838; */
     /* background-color: rgba(255, 255, 255, 0.3); */
-    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  .nav-link {
+    width: 70%;
+    text-align: center;
+    transition: box-shadow 0.2s ease-in;
+  }
+  .nav-link:hover {
+    border-radius: 1rem;
+    background-color: #252525;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   }
 }
@@ -189,6 +199,7 @@ h2 {
   border-radius: 24px;
   min-height: 13rem;
   align-content: center;
+  transition: transform 0.3s;
 }
 .skill-card img {
   /* object-fit: contain; */
@@ -205,6 +216,10 @@ h2 {
   background-color: #252525;
   color: #ffffff;
   margin-top: 2rem;
+  transition: border 0.2s ease;
+}
+.card:hover {
+  border: 1px solid rgba(186, 255, 57, 0.5);
 }
 .card img {
   width: 100%;
@@ -284,9 +299,16 @@ textarea {
   background-color: transparent;
   border: 1px solid #ffffff;
 }
+.input-text:focus,
+textarea:focus {
+  background-color: rgba(37, 37, 37, 0.5);
+}
 .card-form label {
   padding-top: 5%;
   font-size: 1.2rem;
+}
+#email-error {
+  color: rgba(255, 0, 0, 0.7);
 }
 
 h5 {
@@ -304,18 +326,21 @@ h5 {
   max-width: 500px;
   width: 100%;
 }
-#submit-container {
+.submit-container {
   display: flex;
   justify-content: center;
   padding-top: 2rem;
 }
-#submit-btn {
+#submit-btn,
+.modal-footer button {
+  background-color: transparent;
   border: 1px solid #baff39;
   color: #baff39;
   font-size: 1.2rem;
   font-weight: 300;
 }
-#submit-btn:hover {
+#submit-btn:hover,
+.modal-footer button:hover {
   color: #383838;
   background-color: #baff39;
   font-weight: 600;
@@ -337,4 +362,33 @@ footer {
 #footer-icon i {
   color: #ffffff;
   font-size: 2rem;
+}
+.modal-content {
+  margin-top: 20%;
+  padding: 1rem;
+  background-color: rgba(56, 56, 56, 0.6);
+  /* background-color: #383838; */
+  /* background-color: rgba(255, 255, 255, 0.3); */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-size: 1.2rem;
+}
+.modal-title {
+  font-size: 2rem;
+  width: 100%;
+}
+.modal-header,
+.modal-footer {
+  border: none;
+}
+
+.skill-card article:hover {
+  /* background-color: #252525; */
+  transform: scale(0.9);
+  background-color: rgba(40, 40, 40, 0.9);
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+#title-icon a i:hover {
+  transform: scale(1.1);
 }
