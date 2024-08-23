@@ -1,20 +1,20 @@
 body {
-  background-color: #6e6e6e; /* Gris oscuro */
-  color: #ffffff; /* Blanco */
+  background-color: #6e6e6e;
+  color: #ffffff;
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .navbar {
   background-color: rgba(56, 56, 56, 0.7);
-  /* background-color: #383838; */
-  /* background-color: rgba(255, 255, 255, 0.3); */
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   height: 4rem;
   margin-bottom: 10%;
 }
+
 nav div {
   align-items: center;
 }
@@ -39,10 +39,21 @@ nav div {
 .navbar-nav {
   font-weight: 300;
   font-size: 1.2rem;
-  /* background-color: rgba(56, 56, 56, 0.9); */
   position: relative;
   z-index: 1;
   border-radius: 1rem;
+}
+.nav-link {
+  transition: border-bottom 1s ease, font-size 0.5s ease;
+}
+.nav-link.active {
+  font-weight: bolder;
+  font-size: 1.3rem;
+  /* border-bottom: 1px solid #baff39; */
+  border-bottom: 1px solid rgba(186, 255, 57, 0.7);
+}
+.nav-link:hover {
+  border-bottom: 1px solid rgba(186, 255, 57, 0.7);
 }
 header {
   padding-top: 20%;
@@ -107,8 +118,6 @@ h1 {
 @media (max-width: 992px) {
   .navbar-nav {
     background-color: rgba(56, 56, 56, 0.9);
-    /* background-color: #383838; */
-    /* background-color: rgba(255, 255, 255, 0.3); */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   }
   .nav-link {
@@ -116,10 +125,18 @@ h1 {
     text-align: center;
     transition: box-shadow 0.2s ease-in;
   }
+  .nav-link.active {
+    border-bottom: none;
+  }
   .nav-link:hover {
     border-radius: 1rem;
+    border-bottom: none;
     background-color: #252525;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  .navbar-toggler {
+    border: none;
+    color: #baff39;
   }
 }
 @media (max-width: 570px) {
@@ -135,7 +152,6 @@ h1 {
     justify-content: end;
   }
 
-  /* Opcional: Centrando los textos */
   #title h1 {
     text-align: start;
     width: auto;
@@ -161,6 +177,7 @@ h2 {
 }
 #about-text {
   text-align: start;
+  font-size: 1.2rem;
 }
 
 #about-img {
@@ -175,24 +192,11 @@ h2 {
 #skills {
   text-align: center;
 }
-#skill-card-container {
-  /* width: 100%; */
-}
-#skill-card-container .row {
-  /* width: 100%; */
-}
+
 .skill-card {
   padding-left: 3%;
   padding-right: 3%;
   margin-top: 2rem;
-  /* background-color: #383838; */
-  /* background-color: #ffffff; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* text-align: center; */
-  /* height: 14rem; */
 }
 .skill-card article {
   background-color: #383838;
@@ -349,15 +353,10 @@ hr {
   border-top: 2px solid #383838;
 }
 footer {
-  /* background-color: #383838; */
   padding: 1rem;
   text-align: center;
   height: max-content;
   margin: 0;
-}
-#footer-icon {
-  /* display: flex;
-  justify-content: center; */
 }
 #footer-icon i {
   color: #ffffff;

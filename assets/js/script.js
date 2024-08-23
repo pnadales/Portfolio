@@ -42,3 +42,20 @@ contactForm.addEventListener("submit", function (e) {
       alert("Error");
     });
 });
+
+window.addEventListener("scroll", function () {
+  const sections = document.querySelectorAll("section, header");
+  sections.forEach((section) => {
+    const navLink = document.querySelector(
+      ".nav-link[href*=" + section.id + "]"
+    );
+    if (
+      section.offsetTop - 5 <= this.scrollY &&
+      this.scrollY <= section.offsetTop + section.offsetHeight - 5
+    ) {
+      navLink.classList.add("active");
+    } else {
+      navLink.classList.remove("active");
+    }
+  });
+});
