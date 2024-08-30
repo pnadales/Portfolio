@@ -237,7 +237,7 @@ h2 {
 }
 .card-body a:first-of-type {
   background-color: #baff39;
-  color: #6e6e6e;
+  color: #383838;
   font-size: 1.5rem;
 }
 .card-body a:first-of-type:hover {
@@ -270,6 +270,11 @@ h2 {
 .card-btn-text {
   display: inline;
 }
+.custom-tooltip {
+  --bs-tooltip-bg: rgba(0, 0, 0, 0.6);
+  --bs-tooltip-color: #ffffff;
+}
+
 #contact {
   text-align: center;
 }
