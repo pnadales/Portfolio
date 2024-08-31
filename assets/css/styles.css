@@ -318,6 +318,9 @@ textarea {
   background-color: transparent;
   border: 1px solid #ffffff;
 }
+textarea {
+  min-height: 9rem;
+}
 .input-text:focus,
 textarea:focus {
   background-color: rgba(37, 37, 37, 0.5);
