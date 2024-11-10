@@ -392,12 +392,14 @@ h5 {
   color: #baff39;
   font-size: 1.2rem;
   font-weight: 300;
+  transition: transform 0.2s ease-in-out, font-weight 0.2s ease-in-out;
 }
 #submit-btn:hover,
 .modal-footer button:hover {
   color: #383838;
   background-color: #baff39;
-  font-weight: 600;
+  font-weight: 500;
+  transform: scale(1.05);
 }
 hr {
   border-top: 2px solid #383838;
