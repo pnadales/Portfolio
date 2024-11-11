@@ -74,13 +74,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (entry.isIntersecting) {
           setTimeout(() => {
             entry.target.classList.add("reveal");
-            observer.unobserve(entry.target); // Deja de observar el elemento para que no vuelva a animarse
-          }, index * 100); // Ajusta el valor (200 ms) para controlar el retraso entre cards
+            observer.unobserve(entry.target);
+          }, index * 100);
         }
       });
     },
     {
-      threshold: 0.2, // Ajusta este valor según cuándo quieres que se dispare la animación (20% de visibilidad)
+      threshold: 0.2,
     }
   );
   const observerAbout = new IntersectionObserver(
@@ -88,12 +88,12 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("reveal-about");
-          observer.unobserve(entry.target); // Deja de observar el elemento para que no vuelva a animarse
+          observer.unobserve(entry.target);
         }
       });
     },
     {
-      threshold: 0.3, // Ajusta este valor según cuándo quieres que se dispare la animación (20% de visibilidad)
+      threshold: 0.3,
     }
   );
   const about = document.querySelectorAll(".about-content");
