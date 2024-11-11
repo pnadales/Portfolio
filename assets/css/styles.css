@@ -148,8 +148,11 @@ h1 {
 .icon-row {
   height: 50%;
 }
+.second-row {
+  margin-top: 1rem;
+}
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .navbar-nav {
     background-color: rgba(56, 56, 56, 0.9);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
