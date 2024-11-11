@@ -66,3 +66,40 @@ const tooltipTriggerList = document.querySelectorAll(
 const tooltipList = [...tooltipTriggerList].map(
   (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
 );
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add("reveal");
+            observer.unobserve(entry.target); // Deja de observar el elemento para que no vuelva a animarse
+          }, index * 100); // Ajusta el valor (200 ms) para controlar el retraso entre cards
+        }
+      });
+    },
+    {
+      threshold: 0.2, // Ajusta este valor según cuándo quieres que se dispare la animación (20% de visibilidad)
+    }
+  );
+  const observerAbout = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal-about");
+          observer.unobserve(entry.target); // Deja de observar el elemento para que no vuelva a animarse
+        }
+      });
+    },
+    {
+      threshold: 0.3, // Ajusta este valor según cuándo quieres que se dispare la animación (20% de visibilidad)
+    }
+  );
+  const about = document.querySelectorAll(".about-content");
+  about.forEach((card) => observerAbout.observe(card));
+  const skillCards = document.querySelectorAll(".skill-card");
+  const projectCards = document.querySelectorAll(".project-card");
+  skillCards.forEach((card) => observer.observe(card));
+  projectCards.forEach((card) => observerAbout.observe(card));
+});

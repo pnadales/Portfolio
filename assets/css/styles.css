@@ -1,10 +1,17 @@
 body {
-  background-color: #6e6e6e;
+  /* background-color: #6e6e6e; */
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  background: rgb(37, 37, 37);
+  background: radial-gradient(
+    circle,
+    rgba(37, 37, 37, 1) 0%,
+    rgba(56, 56, 56, 1) 25%,
+    rgba(110, 110, 110, 1) 100%
+  );
 }
 
 .navbar {
@@ -25,6 +32,7 @@ nav div {
   align-items: center;
   padding-top: 1%;
   font-weight: 550;
+  user-select: none;
 }
 .white-logo {
   color: #ffffff;
@@ -202,19 +210,28 @@ h2 {
   font-size: 3rem;
   font-weight: 600;
 }
+
 #about,
 #projects {
   text-align: center;
-  background-color: #383838;
 }
+
 #about-text {
   text-align: start;
   font-size: 1.2rem;
+  opacity: 0;
+  transform: translate(-100px, 0) scale(0.9);
 }
 
 #about-img {
   text-align: center;
   vertical-align: middle;
+  opacity: 0;
+
+  transform: translate(100px, 0) scale(0.9);
+}
+.reveal-about {
+  animation: reveal 0.5s ease-in-out forwards;
 }
 #about-img img {
   width: 60%;
@@ -229,6 +246,21 @@ h2 {
   padding-left: 3%;
   padding-right: 3%;
   margin-top: 2rem;
+  opacity: 0;
+  transform: translate(0, 100px) scale(0.5);
+}
+.reveal {
+  animation: reveal 0.3s linear forwards;
+}
+@keyframes reveal {
+  from {
+    opacity: 0;
+    /* transform: translate(0, 100px) scale(0.5); */
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
 }
 @media (max-width: 576px) {
   .skill-card {
@@ -238,11 +270,20 @@ h2 {
   }
 }
 .skill-card article {
-  background-color: #383838;
+  /* border: 1px solid rgba(170, 166, 166, 0.5); */
+  background-color: rgba(170, 166, 166, 0.1);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+
+  /* background-color: #383838; */
   border-radius: 24px;
   min-height: 13rem;
   align-content: center;
   transition: transform 0.3s;
+}
+.skill-card article:hover {
+  /* background-color: #252525; */
+  border: none;
+  transform: scale(0.9);
 }
 .skill-card img {
   /* object-fit: contain; */
@@ -263,6 +304,7 @@ h2 {
   color: #ffffff;
   margin-top: 2rem;
   transition: border 0.2s ease;
+  opacity: 0;
 }
 
 .card:hover {
@@ -442,11 +484,4 @@ footer {
 .modal-header,
 .modal-footer {
   border: none;
-}
-
-.skill-card article:hover {
-  /* background-color: #252525; */
-  transform: scale(0.9);
-  background-color: rgba(40, 40, 40, 0.9);
-  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
 }
