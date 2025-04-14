@@ -58,6 +58,14 @@ window.addEventListener("scroll", function () {
       navLink.classList.remove("active");
     }
   });
+
+  const arrow_down = document.getElementById("a-arrow");
+
+  if (this.scrollY > this.screen.height / 5) {
+    arrow_down.classList.add("fade");
+  } else {
+    arrow_down.classList.remove("fade");
+  }
 });
 
 const tooltipTriggerList = document.querySelectorAll(

@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background: rgb(37, 37, 37);
+  /* background: rgb(37, 37, 37); */
   background: radial-gradient(
     circle,
     rgba(37, 37, 37, 1) 0%,
@@ -87,6 +87,7 @@ header {
   background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 #title {
+  max-width: 100vw;
   position: relative;
   display: flex;
   align-items: center;
@@ -223,6 +224,7 @@ h2 {
 }
 
 #about-text {
+  overflow: hidden;
   text-align: start;
   font-size: 1.2rem;
   opacity: 0;
@@ -230,11 +232,12 @@ h2 {
 }
 
 #about-img {
+  /* display: none; */
   text-align: center;
   vertical-align: middle;
   opacity: 0;
 
-  transform: translate(100px, 0) scale(0.9);
+  transform: translate(-100px, 0) scale(0.9);
 }
 .reveal-about {
   animation: reveal 0.5s ease-in-out forwards;
@@ -249,8 +252,7 @@ h2 {
 }
 
 .skill-card {
-  padding-left: 3%;
-  padding-right: 3%;
+  padding: 0 1rem;
   margin-top: 2rem;
   opacity: 0;
   transform: translate(0, 100px) scale(0.5);
@@ -283,6 +285,7 @@ h2 {
   /* background-color: #383838; */
   border-radius: 24px;
   min-height: 13rem;
+  height: 100%;
   align-content: center;
   transition: transform 0.3s;
 }
@@ -292,18 +295,21 @@ h2 {
   transform: scale(0.9);
 }
 .skill-card img {
-  /* object-fit: contain; */
-  height: 5rem;
+  object-fit: scale-down;
+  /* height: 5rem; */
+  max-width: 100%;
+  /* width: fit-content; */
+  padding: 40px;
 }
 .skill-card p {
   margin-top: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   #php {
     margin: 2rem auto;
   }
-}
+} */
 #project-card-container .row {
   margin: 0;
 }
@@ -440,7 +446,8 @@ h5 {
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
+  max-width: 95vw;
+
   width: 100%;
 }
 .submit-container {
